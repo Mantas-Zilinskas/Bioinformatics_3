@@ -1,12 +1,11 @@
 import sys
-import math
 import matplotlib.pyplot as plt
 
 # open file
 file = sys.argv[1]
 f = open(file, 'r')
 
-# get sequences
+# get contents
 content = f.read()
 f.close()
 content = content.split('\n')
@@ -23,7 +22,7 @@ for sequence in content:
 
 # generate histogram
 frequency_percentage = [frequency*100 for frequency in frequencies]
-bins = range(0, 101) 
+bins = range(0, 101, 1) 
 plt.hist(frequency_percentage, bins=bins, edgecolor='black')
 plt.title('C/G Content Distribution in Reads')
 plt.xlabel('C/G Content (%)')

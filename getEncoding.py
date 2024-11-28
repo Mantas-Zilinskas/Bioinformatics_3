@@ -22,7 +22,7 @@ for char in content:
         min = val
 
 # determine encoding method by checking the methods 
-# from the smallest (max(char) - min(char)) value  
+# from the smallest gap (max(char) - min(char)) value  
 encoding = 31
 if min >= 33 and max <= 74:
     print("Illumina 1.8 Phred+64")
